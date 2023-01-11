@@ -46,7 +46,7 @@ public class Main {
     //----------------------
     //SPECIFY MINIGAMES HERE!
 
-    minigames[0] = new TestGame();
+    minigames[0] = new RockPaperScissors();
   
     //----------------------
     
