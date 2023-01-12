@@ -15,5 +15,6 @@ public class TestGame extends Minigame {
     }
     players.get(0).addPoints(2);
     wait(1.0);
+    clear();
 	}
 }
