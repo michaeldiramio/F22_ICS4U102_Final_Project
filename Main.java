@@ -46,8 +46,7 @@ public class Main {
     //----------------------
     //SPECIFY MINIGAMES HERE!
 
-    minigames[0] = new TestGame();
-    minigames[1] = new Minesweeper();
+    minigames[0] = new RockPaperScissors();
   
     //----------------------
     
