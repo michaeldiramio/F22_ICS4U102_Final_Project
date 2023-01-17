@@ -72,7 +72,6 @@ public class RockPaperScissors extends Minigame {
           //If bot is needed
           if (opponents[1].equals("bot")) {
             Player o1 = inGameP.get(Integer.parseInt(opponents[0]));
-            String o2 = "bot";
   
             //Display
             clear();
@@ -103,7 +102,7 @@ public class RockPaperScissors extends Minigame {
             } else if (answer == 2) {
               answers[0] = "_"; //Paper
             } else {
-              answers[0] = "*<"; //Scissors
+              answers[0] = "8<"; //Scissors
             }
             clear();
             //Bot's answer
