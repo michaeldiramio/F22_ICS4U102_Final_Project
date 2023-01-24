@@ -4,12 +4,11 @@ import java.util.Random;
 
 public class Main {
   private ArrayList<Player> players = new ArrayList<Player>();
-
-  private Minigame[] minigames = new Minigame[5];
+  private Minigame[] minigames = new Minigame[4];
   private Scanner userIn;
   private Random rdm = new Random();
 
-  public void clear() {
+   public void clear() {
     //Clears the console
     System.out.print("\033[H\033[2J"); 
     System.out.flush();
@@ -43,15 +42,14 @@ public class Main {
     };
   }
   
-  public void run() throws Exception {
+  public void run() {
     //----------------------
     //SPECIFY MINIGAMES HERE!
 
-    minigames[0] = new Wordle();
-    minigames[1] = new RockPaperScissors();
-    minigames[2] = new Minesweeper();
-    minigames[3] = new Mole();
-    minigames[4] = new Simon();
+    minigames[0] = new RockPaperScissors();
+    minigames[1] = new Minesweeper();
+    minigames[2] = new Trivia();
+    minigames[3] = new NumberGuessing();
   
     //----------------------
     
@@ -155,7 +153,6 @@ public class Main {
       clear();
       //Running the game
       minigames[random].run(players);
-      minigames[random] = null;
     }
 
     //Finding the winner
@@ -183,7 +180,7 @@ public class Main {
     wait(2.0);
   }
   
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 	  Main m = new Main();
     m.run();
 	}
