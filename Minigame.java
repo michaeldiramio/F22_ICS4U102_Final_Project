@@ -41,7 +41,7 @@ public class Minigame {
     return ("Title");
   }
   
-	public void run(ArrayList<Player> players) {
+	public void run(ArrayList<Player> players) throws Exception {
 		//Do the game here!
 	}
 }
