@@ -5,11 +5,11 @@ import java.util.Random;
 public class Main {
   private ArrayList<Player> players = new ArrayList<Player>();
 
-  private Minigame[] minigames = new Minigame[3];
+  private Minigame[] minigames = new Minigame[5];
   private Scanner userIn;
   private Random rdm = new Random();
 
-   public void clear() {
+  public void clear() {
     //Clears the console
     System.out.print("\033[H\033[2J"); 
     System.out.flush();
@@ -43,16 +43,15 @@ public class Main {
     };
   }
   
-  public void run() {
+  public void run() throws Exception {
     //----------------------
     //SPECIFY MINIGAMES HERE!
-
 
     minigames[0] = new Wordle();
     minigames[1] = new RockPaperScissors();
     minigames[2] = new Minesweeper();
     minigames[3] = new Mole();
-
+    minigames[4] = new Simon();
   
     //----------------------
     
@@ -184,7 +183,7 @@ public class Main {
     wait(2.0);
   }
   
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 	  Main m = new Main();
     m.run();
 	}
