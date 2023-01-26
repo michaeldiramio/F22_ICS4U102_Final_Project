@@ -46,7 +46,8 @@ public class Main {
     //----------------------
     //SPECIFY MINIGAMES HERE!
 
-    minigames[0] = new TestGame();
+    minigames[0] = new HangMan();
+    minigames[0] = new FastFigures();
   
     //----------------------
     
