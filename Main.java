@@ -46,10 +46,13 @@ public class Main {
     //----------------------
     //SPECIFY MINIGAMES HERE!
 
+    
     minigames[0] = new RockPaperScissors();
     minigames[1] = new Minesweeper();
     minigames[2] = new Trivia();
     minigames[3] = new NumberGuessing();
+    minigames[4] = new HangMan();
+    minigames[5] = new FastFigures();
   
     //----------------------
     
