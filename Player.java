@@ -30,4 +30,8 @@ public class Player {
   public void addPoints(int amount) {
     this.points = this.points + amount;
   }
+
+  public void resetPoints() {
+    this.points = 0;
+  }
 }
