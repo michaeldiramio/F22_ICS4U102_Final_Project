@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Main {
   private ArrayList<Player> players = new ArrayList<Player>();
-  private Minigame[] minigames = new Minigame[8];
+  private Minigame[] minigames = new Minigame[9;
   private Scanner userIn;
   private Random rdm = new Random();
 
-   public void clear() {
+  public void clear() {
     //Clears the console
     System.out.print("\033[H\033[2J"); 
     System.out.flush();
@@ -54,6 +54,7 @@ public class Main {
     minigames[5] = new FastFigures();
     minigames[6] = new Unlucky();
     minigames[7] = new GuessingGame();
+    minigames[8] = new Wheel();
   
     //----------------------
     
@@ -181,7 +182,8 @@ public class Main {
     print("");
     print("");
     print("\t" + winner[0].getName() + " [P" + winner[0].getNumber() + "], WITH " + winner[0].getPoints() + " POINTS!");
-    wait(2.0);
+    wait(5.0);
+    clear();
   }
   
 	public static void main(String[] args) {
