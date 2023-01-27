@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Main {
   private ArrayList<Player> players = new ArrayList<Player>();
-  private Minigame[] minigames = new Minigame[1];
+  private Minigame[] minigames = new Minigame[4];
   private Scanner userIn;
   private Random rdm = new Random();
 
@@ -46,7 +46,17 @@ public class Main {
     //----------------------
     //SPECIFY MINIGAMES HERE!
 
-    minigames[0] = new GuessingGame();
+
+    minigames[6] = new GuessingGame();
+
+    
+    minigames[0] = new RockPaperScissors();
+    minigames[1] = new Minesweeper();
+    minigames[2] = new Trivia();
+    minigames[3] = new NumberGuessing();
+    minigames[4] = new HangMan();
+    minigames[5] = new FastFigures();
+
   
     //----------------------
     
