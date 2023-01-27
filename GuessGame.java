@@ -3,6 +3,11 @@ import java.util.Random;
 import java.util.ArrayList;
 
 public class GuessGame extends Minigame {
+
+  public String getMinigameName() {
+    return ("The Guessing Game");
+  }
+  
   Scanner userIn = new Scanner(System.in);
 
   Random rand = new Random(10);

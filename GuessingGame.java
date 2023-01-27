@@ -5,7 +5,7 @@ import java.util.Random;
 public class GuessingGame extends Minigame {
 
   public String getMinigameName() {
-    return ("Guessing Game");
+    return ("The Blind Guessing Game");
   }
 	public void run(ArrayList<Player> players) {
     Scanner sc = new Scanner(System.in);
@@ -22,9 +22,9 @@ public class GuessingGame extends Minigame {
       print(players.get(i).getName() + "[P" + players.get(i).getNumber() + "] ' s turn!'");
       
       //Put code in here
-      System.out.print(pin);
-       wait(2.0);
-      backspace(pin);
+      //System.out.print(pin);
+      //wait(2.0);
+      //backspace(pin);
       //gets entry 
       System.out.print("guess the pin code: ");
       int entry = sc.nextInt();
