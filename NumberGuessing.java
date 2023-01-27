@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class NumberGuessing extends Minigame {
 
   public String getMinigameName(){
-    return ("Number Guesser");
+    return ("Number Guessing");
   }
   
   public void run(ArrayList<Player> players) {
@@ -16,19 +16,20 @@ public class NumberGuessing extends Minigame {
       Random randGen = new Random();
       Scanner userIn = new Scanner(System.in);
       
-      wait(3.0);
+      wait(1.5);
       System.out.println("Pick a number between 1 - 10!");
       int guess = userIn.nextInt();
-      wait(1.0);
       int random = randGen.nextInt(9) + 1;
-      System.out.println(random);
+      System.out.println("Guess Number: " + guess);
+      wait(0.5);
+      System.out.println("Actual Number: " + random);
 
       if(guess == random){
-        System.out.println("Wow! You guessed the right number! You get one point!");
+        System.out.println("You guessed the right number! You get one point!");
         players.get(i).addPoints(1);
       } else {
         System.out.println("You guessed the wrong number, you get no points."); 
-        wait(4.0);
+        wait(3.0);
       }
       clear();
     }

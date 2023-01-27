@@ -30,8 +30,10 @@ public class Minesweeper extends Minigame {
 		    }
 		    System.out.println();
 		  }
-      print("Player " + i + "! Go!");
-      print("Select a square! Enter a co-ordinate [X,Y] (INCLUDE COMMA)"); 
+      print("Player " + (i+1) + "! [" + players.get(i).getName() + "] It's your turn!");
+      wait(0.5);
+      print("Select a square! Enter a co-ordinate [X,Y]"); 
+      print("[INCLUDE COMMA]");
       //get coordinates and turn it into an integer
       input = userIn.nextLine();
       String xInput = input.substring(input.indexOf(",") - 1 , input.indexOf(","));

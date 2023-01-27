@@ -17,16 +17,11 @@ public class Trivia extends Minigame {
     Random randGen = new Random();
     Scanner userIn = new Scanner(System.in);
     int qSize = 0;
-    int aSize = 0;
     //file input stuffs
     try {
       Scanner questions = new Scanner(new File("triviaquestions.txt"));
       Scanner answers = new Scanner(new File("triviaanswers.txt"));
-      //get answer file size
-      while(answers.hasNextLine()){
-        answers.nextLine();
-        aSize++;
-      }
+      //get question file size
       while(questions.hasNextLine()){
         questions.nextLine();
         qSize++;
@@ -38,8 +33,10 @@ public class Trivia extends Minigame {
       
       print("Welcome to the Trivia Game!");
       wait(1.5);
-      print("Please input the answer to the upcoming question, if it's correct, you get two points!");
-      wait(4.0);
+      print("Please input the answer to the upcoming question.");
+      wait(0.3);
+      print("If it's correct, you get three points!");
+      wait(3.0);
       clear();
 
       //randomize the questions
@@ -65,12 +62,12 @@ public class Trivia extends Minigame {
       String input = userIn.nextLine();
     
       if(input.equalsIgnoreCase(aPrint)){
-        System.out.println("You got the right answer! You get two points!");
-        players.get(i).addPoints(2);
-        wait(4.0);
+        System.out.println("Correct! You get three points!");
+        players.get(i).addPoints(3);
+        wait(3.0);
         } else {
-        System.out.println("You unfortunately got the wrong answer.");
-        wait(4.0);
+        System.out.println("Unfortunately, you got the wrong answer.");
+        wait(3.0);
         }
 
       clear();
