@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Main {
   private ArrayList<Player> players = new ArrayList<Player>();
-  private Minigame[] minigames = new Minigame[3]; 
+  private Minigame[] minigames = new Minigame[4]; 
   private Scanner userIn;
   private Random rdm = new Random();
 
@@ -45,10 +45,11 @@ public class Main {
   public void run() {
     //----------------------
     //SPECIFY MINIGAMES HERE!
-
+   
     minigames[0] = new Wordle();
     minigames[1] = new RockPaperScissors();
     minigames[2] = new Minesweeper();
+    minigames[3] = new Wheel();
   
     //----------------------
     
@@ -177,7 +178,8 @@ public class Main {
     print("");
     print("");
     print("\t" + winner[0].getName() + " [P" + winner[0].getNumber() + "], WITH " + winner[0].getPoints() + " POINTS!");
-    wait(2.0);
+    wait(5.0);
+    clear();
   }
   
 	public static void main(String[] args) {
