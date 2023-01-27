@@ -5,7 +5,7 @@ import java.util.Random;
 public class Main {
   private ArrayList<Player> players = new ArrayList<Player>();
 
-  private Minigame[] minigames = new Minigame[3];
+  private Minigame[] minigames = new Minigame[5];
   private Scanner userIn;
   private Random rdm = new Random();
 
