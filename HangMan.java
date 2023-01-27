@@ -54,7 +54,7 @@ public class HangMan extends Minigame {
       clear();
       print("The czar this round is " + players.get(czar).getName());
       wait(3.0);
-
+      //getting the word
       print( "\n" + players.get(czar).getName() + ", input a word now");
       valid = true;
       //validator for inputting the czar word
@@ -69,6 +69,7 @@ public class HangMan extends Minigame {
           wordArr = new String[word.length()];
           wordArrCheck = new int[wordArr.length];
           wordCheck = 0;
+          //this makes the array for the word, and changes them into underscores for now
           for(int i = 0; i < word.length(); i++) {
             String letter = word.substring(i, i+1);
             if(letter.equalsIgnoreCase(" ")) {
@@ -82,24 +83,26 @@ public class HangMan extends Minigame {
       }
   
       clear();
-
+      //Starts the round
       round = true;
       while(round == true) {
+        //resets the checking array
         for(int i = 0; i < wordArrCheck.length; i++) {
           wordArrCheck[i] = 0;
         }
         wordCheck = 0;
+        //prompts
         clear();
         print("You have " + guesses + " wrong answers left\n");
         print("\nWord(s): ");
         for(int i = 0; i < wordArr.length; i++) {
             System.out.print(wordArr[i]);
-          }
+        }
         wait(1.0);
         print("\n\nwrite a letter");
         validRo = true;
         while(validRo == true) {
-          
+          //validator, checks if the guess was correct
           guess = scan.nextLine();
           if(guess.length() == 0) {
             print("\nPlease write a letter\n");
@@ -123,6 +126,7 @@ public class HangMan extends Minigame {
             
           }
         }
+        //checks to see if the word has been completed
         for(int i = 0; i < wordArr.length; i++) {
           if(wordArr[i].equalsIgnoreCase("_")) {
             wordArrCheck[i] = 0;
@@ -138,6 +142,7 @@ public class HangMan extends Minigame {
         } else {
           teamWin = false;
         }
+        //the guessing team won
         if(teamWin == true) {
           print("You guessed the phrase " + word + " correctly");
           wait(3.0);
@@ -146,7 +151,7 @@ public class HangMan extends Minigame {
         } else {
           
         }
-        
+        //the czar won
         wait(2.0);
         if(guesses == 0) {
           print("Wrong, the phrase was " + word);
@@ -156,7 +161,7 @@ public class HangMan extends Minigame {
         }
         
       }
-
+      //This gives points to the guessing team if they win
       if(teamWin == true) {
         clear();
         print("\nThe guessing team won:\n");
@@ -170,6 +175,7 @@ public class HangMan extends Minigame {
         }
         wait(5.0);
         gameLoop = false;
+        //gives point to the czar if they win
       } else if(czarWin == true) {
         clear();
         print("\nThe czar won:\n");

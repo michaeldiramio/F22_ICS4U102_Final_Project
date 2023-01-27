@@ -79,7 +79,7 @@ public class FastFigures extends Minigame {
             count++;
             streak = true;
             System.out.println(count + " right\n");
-            
+            //this is if they get it wrong
           } else {
             print("\nWrong, you took " + (timeTakenDub / 1000) + " seconds. But! it's x2 since it's wrong(" + ((timeTakenDub / 1000 * 2)) + ") :/\n");
             totalTime = totalTime + (timeTakenDub * 2);
@@ -87,6 +87,7 @@ public class FastFigures extends Minigame {
             
           }
         }
+        //checks the streak and tells you if you have one
         if(streak == true) {
           streakCount++;
           System.out.println("Streak of " + streakCount);
@@ -95,6 +96,7 @@ public class FastFigures extends Minigame {
           streakCount = 0;
         }
       }
+      //after you guess prompts
       wait(2.0);
       clear();
       playerTime[i] = totalTime;
@@ -113,6 +115,7 @@ public class FastFigures extends Minigame {
         
       }
     }
+    //announcing the winner and giving points
     clear();
     System.out.println("The winner is " + players.get(whichPlayer).getName() + " with a time of " + (shortest / 1000) + " seconds!\n");
     for(int i = 0; i < playerSize; i++) {

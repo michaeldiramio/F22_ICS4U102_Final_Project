@@ -45,10 +45,6 @@ public class Main {
   public void run() {
     //----------------------
     //SPECIFY MINIGAMES HERE!
-
-
-    minigames[7] = new GuessingGame();
-
     
     minigames[0] = new RockPaperScissors();
     minigames[1] = new Minesweeper();
@@ -57,6 +53,7 @@ public class Main {
     minigames[4] = new HangMan();
     minigames[5] = new FastFigures();
     minigames[6] = new Unlucky();
+    minigames[7] = new GuessingGame();
   
     //----------------------
     
