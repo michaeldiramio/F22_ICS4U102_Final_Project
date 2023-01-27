@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Main {
   private ArrayList<Player> players = new ArrayList<Player>();
-  private Minigame[] minigames = new Minigame[3];
+  private Minigame[] minigames = new Minigame[3]; 
   private Scanner userIn;
   private Random rdm = new Random();
 
-   public void clear() {
+  public void clear() {
     //Clears the console
     System.out.print("\033[H\033[2J"); 
     System.out.flush();
