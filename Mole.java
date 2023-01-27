@@ -27,6 +27,8 @@ public class Mole extends Minigame {
     for(int i = 0; i < players.size(); i++) {
     System.out.println(
         "Welcome to Whack-A-Mole! The game is simple. A row of numbers 1 through 9 will appear on the screen. The 'Mole' is the slot with a 0. Quickly type the number that SHOULD be there to whack it! The time in between each round gradually decreases, so stay sharp! Press the Y key to continue when you're ready.");
+      System.out.println();
+      System.out.println("Player " + i + " turn!");
 
     String gamestart = userIn.nextLine();
     if (gamestart.equalsIgnoreCase("Y")) {
