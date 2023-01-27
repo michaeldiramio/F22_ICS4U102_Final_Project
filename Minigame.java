@@ -42,6 +42,6 @@ public class Minigame {
   }
   
 	public void run(ArrayList<Player> players) {
-		
+		//Do the game here!
 	}
 }
