@@ -14,7 +14,7 @@ public class Unlucky extends Minigame {
   }
 
   public void run(ArrayList<Player> players) {
-    
+    clear();
     print("Unlucky :/");
     for(int i = 0; i < players.size(); i++) {
       if(biggest < players.get(i).getPoints()) {
